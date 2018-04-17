@@ -417,7 +417,7 @@ public class TileBrewer extends TileMachineBase {
 						if (ret != null) {
 							return ret;
 						}
-						if (isActive && (from == null || allowInsertion(sideConfig.sideTypes[sideCache[from.ordinal()]]))) {
+						if (!isActive && (from == null || allowInsertion(sideConfig.sideTypes[sideCache[from.ordinal()]]))) {
 							return inputTank.drain(resource, doDrain);
 						}
 					}
@@ -434,7 +434,7 @@ public class TileBrewer extends TileMachineBase {
 						if (ret != null) {
 							return ret;
 						}
-						if (isActive && (from == null || allowInsertion(sideConfig.sideTypes[sideCache[from.ordinal()]]))) {
+						if (!isActive && (from == null || allowInsertion(sideConfig.sideTypes[sideCache[from.ordinal()]]))) {
 							return inputTank.drain(maxDrain, doDrain);
 						}
 					}

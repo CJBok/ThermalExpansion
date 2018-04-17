@@ -572,10 +572,11 @@ public class TileSmelter extends TileMachineBase {
 				@Override
 				public int fill(FluidStack resource, boolean doFill) {
 
-					if (from == null || allowInsertion(sideConfig.sideTypes[sideCache[from.ordinal()]])) {
-						return tank.fill(resource, doFill);
-					}
-					return 0;
+					return tank.fill(resource, doFill);
+					//					if (from == null || allowInsertion(sideConfig.sideTypes[sideCache[from.ordinal()]])) {
+					//						return tank.fill(resource, doFill);
+					//					}
+					//					return 0;
 				}
 
 				@Nullable
